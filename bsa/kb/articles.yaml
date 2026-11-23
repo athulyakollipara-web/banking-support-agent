@@ -1,0 +1,163 @@
+# Help-center articles for Harbor Bank, a FICTIONAL bank used for this demo. Policies, fees and timings below are
+# examples, not any real bank's terms. A deployment replaces this file with the client's own help-center content.
+- id: card-delivery
+  title: When will my card arrive?
+  intents: [card_arrival, card_delivery_estimate, order_physical_card, get_physical_card]
+  text: >-
+    New physical cards are dispatched within 1 business day and usually arrive in 3 to 5 business days in the US.
+    You can follow delivery in the app under Cards. If a card has not arrived after 10 business days, we can cancel it
+    and send a replacement at no charge.
+- id: card-activation
+  title: Activating your card
+  intents: [activate_my_card]
+  text: >-
+    Activate a new card in the app under Cards, Activate, or by making a chip-and-PIN payment. Contactless payments
+    work after the first chip-and-PIN payment.
+- id: lost-stolen-card
+  title: Lost, stolen or compromised card
+  intents: [lost_or_stolen_card, compromised_card]
+  text: >-
+    Freeze the card straight away so no new payments can be made; you can unfreeze it any time if you find it.
+    If you think someone used your card, report the payments so our fraud team can review them. A replacement card
+    is free when a card is lost, stolen or compromised.
+- id: card-swallowed
+  title: An ATM kept my card
+  intents: [card_swallowed]
+  text: >-
+    If an ATM keeps your card, freeze it in the app. Cards kept by ATMs are destroyed by the ATM operator, so order
+    a free replacement.
+- id: card-not-working
+  title: My card is not working
+  intents: [card_not_working, contactless_not_working, virtual_card_not_working, card_acceptance]
+  text: >-
+    Check that the card is not frozen and has not expired, and that the merchant accepts Visa. Contactless needs one
+    chip-and-PIN payment after activation, and has a limit of $100 per payment. Virtual cards work online and in
+    mobile wallets only.
+- id: declined
+  title: Why was my payment or withdrawal declined?
+  intents: [declined_card_payment, declined_cash_withdrawal]
+  text: >-
+    Common reasons are not enough balance, a frozen card, a wrong PIN, a merchant that is blocked for security, or a
+    spending limit. The app shows the reason next to each declined payment.
+- id: pending-payments
+  title: Pending card payments and withdrawals
+  intents: [pending_card_payment, pending_cash_withdrawal]
+  text: >-
+    Card payments and cash withdrawals stay pending until the merchant or ATM operator completes them, usually within
+    1 to 3 business days. If a pending payment is not completed within 7 days, it is released back to your balance.
+- id: unrecognised-payment
+  title: A payment I don't recognise
+  intents: [card_payment_not_recognised, cash_withdrawal_not_recognised, direct_debit_payment_not_recognised]
+  text: >-
+    Check whether the merchant name looks different from the shop you used. If you still don't recognise it, freeze
+    your card and report the payment; our fraud team reviews disputes within 10 business days.
+- id: charged-twice
+  title: I was charged twice or charged the wrong amount
+  intents: [transaction_charged_twice, extra_charge_on_statement, wrong_amount_of_cash_received]
+  text: >-
+    A second charge is often a temporary authorisation that drops off within 3 business days. If both charges complete,
+    open a dispute for the duplicate and we will contact the merchant. For an ATM that gave the wrong amount, report it
+    within 60 days.
+- id: refunds
+  title: Refunds
+  intents: [Refund_not_showing_up, request_refund, "reverted_card_payment?"]
+  text: >-
+    Merchants send refunds, and they usually appear within 5 business days of the merchant processing them. A reverted
+    payment means the merchant cancelled it before it completed. To get money back from a merchant who won't refund,
+    open a dispute.
+- id: transfers-timing
+  title: How long do transfers take?
+  intents: [transfer_timing, pending_transfer, balance_not_updated_after_bank_transfer, transfer_not_received_by_recipient]
+  text: >-
+    Transfers to other US banks usually arrive the same business day if sent before 4 pm ET, otherwise the next
+    business day. International transfers take 1 to 4 business days. A transfer can stay pending while we run security
+    checks.
+- id: transfer-problems
+  title: Failed or declined transfers
+  intents: [failed_transfer, declined_transfer, beneficiary_not_allowed]
+  text: >-
+    Transfers fail when the recipient's details are wrong, the receiving bank rejects them, or our security checks stop
+    them. Money from a failed transfer returns to your balance within 2 business days. Some recipients cannot be added
+    for regulatory reasons.
+- id: cancel-transfer
+  title: Cancelling a transfer
+  intents: [cancel_transfer]
+  text: >-
+    A transfer can be cancelled while it is still pending. Once it has completed, ask the recipient to send the money
+    back or contact us to request a recall.
+- id: receiving-money
+  title: Receiving money and topping up
+  intents: [receiving_money, transfer_into_account, top_up_by_cash_or_cheque, topping_up_by_card, automatic_top_up]
+  text: >-
+    Share your account and routing number to receive transfers. You can add money by bank transfer or debit card in the
+    app, and set up automatic top-ups. Cash and cheque deposits are not supported.
+- id: top-up-problems
+  title: Top-up pending, failed or reverted
+  intents: [pending_top_up, top_up_failed, top_up_reverted, verify_top_up, balance_not_updated_after_cheque_or_cash_deposit]
+  text: >-
+    Card top-ups usually appear instantly but can be held for up to 1 hour for checks. A failed or reverted top-up is
+    returned to the card you used within 5 business days. The first top-up from a new card may need a verification code.
+- id: fees
+  title: Fees
+  intents: [card_payment_fee_charged, cash_withdrawal_charge, top_up_by_bank_transfer_charge, top_up_by_card_charge, transfer_fee_charged, exchange_charge]
+  text: >-
+    Card payments in US dollars are free. ATM withdrawals are free up to $400 a month, then 2%. Top-ups by bank
+    transfer are free; top-ups by card cost 0.5%. Domestic transfers are free and international transfers cost a fixed
+    $3 plus any exchange charge. Currency exchange is 0.5% above the interbank rate.
+- id: exchange
+  title: Exchange rates and currencies
+  intents: [exchange_rate, exchange_via_app, fiat_currency_support, card_payment_wrong_exchange_rate, wrong_exchange_rate_for_cash_withdrawal, supported_cards_and_currencies]
+  text: >-
+    You can hold and exchange 28 currencies in the app. Card payments abroad use the Visa rate on the day the payment
+    completes, which can differ from the rate shown when you paid.
+- id: limits
+  title: Limits
+  intents: [top_up_limits, disposable_card_limits]
+  text: >-
+    You can top up up to $10,000 a day. Disposable virtual cards can be used for one payment and are replaced
+    automatically after it.
+- id: virtual-cards
+  title: Virtual and spare cards
+  intents: [getting_virtual_card, get_disposable_virtual_card, getting_spare_card, card_linking, visa_or_mastercard, apple_pay_or_google_pay]
+  text: >-
+    Create a virtual or disposable card in the app under Cards. You can have up to 3 physical cards. All cards are Visa
+    and work with Apple Pay and Google Pay.
+- id: card-expiry
+  title: Card about to expire
+  intents: [card_about_to_expire]
+  text: >-
+    We send a new card automatically 30 days before your card expires. Your card number stays the same.
+- id: pin
+  title: PIN changes and a blocked PIN
+  intents: [change_pin, pin_blocked]
+  text: >-
+    Change your PIN at any ATM that supports PIN changes. After 3 wrong PIN attempts your PIN is blocked; unblock it in
+    the app under Cards, Security.
+- id: identity
+  title: Verifying your identity
+  intents: [verify_my_identity, why_verify_identity, unable_to_verify_identity, verify_source_of_funds]
+  text: >-
+    Federal rules require us to verify who you are before you can use your account. You need a valid photo ID and a
+    selfie. If verification fails twice, our team reviews it manually within 2 business days. We may also ask where
+    money in your account came from.
+- id: personal-details
+  title: Changing your details and passcode
+  intents: [edit_personal_details, passcode_forgotten]
+  text: >-
+    Update your address, phone and email in the app under Profile. Some changes need a new ID check. If you forgot your
+    passcode, choose Forgot passcode on the login screen.
+- id: eligibility
+  title: Who can open an account
+  intents: [age_limit, country_support, atm_support]
+  text: >-
+    You must be 18 or older and a US resident to open an account. The card works at any ATM displaying the Visa logo.
+- id: close-account
+  title: Closing your account
+  intents: [terminate_account]
+  text: >-
+    You can close your account at any time. Move your money out first; a team member will confirm the closure with you.
+- id: lost-phone
+  title: Lost or stolen phone
+  intents: [lost_or_stolen_phone]
+  text: >-
+    If your phone is lost or stolen, freeze your cards and contact us so we can sign your phone out of the app.

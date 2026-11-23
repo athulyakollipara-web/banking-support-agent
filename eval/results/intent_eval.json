@@ -1,0 +1,130 @@
+{
+  "model": {
+    "C": 50.0,
+    "accept_threshold": 0.76,
+    "oos_threshold": 0.5,
+    "target_precision": 0.97
+  },
+  "banking77_test": {
+    "queries": 3080,
+    "top1_accuracy": 0.9019,
+    "top3_accuracy": 0.9721,
+    "policy": {
+      "auto_accepted": 0.8166,
+      "accuracy_when_auto_accepted": 0.9753,
+      "clarified": 0.1799,
+      "right_intent_among_clarify_options": 0.87,
+      "wrongly_called_out_of_scope": 0.0036,
+      "resolved_correctly": 0.9529,
+      "wrong_intent_acted_on": 0.0201,
+      "wrong_skill_started": 0.0045,
+      "wrong_write_flow_started": 0.001
+    },
+    "wrong_write_flow_examples": [
+      {
+        "gold": "card_payment_fee_charged",
+        "predicted": "direct_debit_payment_not_recognised"
+      },
+      {
+        "gold": "pending_card_payment",
+        "predicted": "transaction_charged_twice"
+      },
+      {
+        "gold": "lost_or_stolen_phone",
+        "predicted": "lost_or_stolen_card"
+      }
+    ],
+    "most_confused_pairs": [
+      {
+        "gold": "top_up_failed",
+        "predicted": "top_up_reverted",
+        "count": 5
+      },
+      {
+        "gold": "fiat_currency_support",
+        "predicted": "exchange_via_app",
+        "count": 4
+      },
+      {
+        "gold": "card_acceptance",
+        "predicted": "card_not_working",
+        "count": 4
+      },
+      {
+        "gold": "why_verify_identity",
+        "predicted": "verify_my_identity",
+        "count": 4
+      },
+      {
+        "gold": "unable_to_verify_identity",
+        "predicted": "verify_my_identity",
+        "count": 4
+      },
+      {
+        "gold": "lost_or_stolen_phone",
+        "predicted": "out_of_scope",
+        "count": 4
+      },
+      {
+        "gold": "balance_not_updated_after_bank_transfer",
+        "predicted": "transfer_not_received_by_recipient",
+        "count": 4
+      },
+      {
+        "gold": "balance_not_updated_after_bank_transfer",
+        "predicted": "pending_transfer",
+        "count": 4
+      }
+    ],
+    "lowest_accuracy_intents": {
+      "balance_not_updated_after_bank_transfer": 0.725,
+      "top_up_failed": 0.75,
+      "fiat_currency_support": 0.775,
+      "declined_transfer": 0.8,
+      "unable_to_verify_identity": 0.8,
+      "card_payment_not_recognised": 0.825,
+      "pending_transfer": 0.825,
+      "pin_blocked": 0.825
+    }
+  },
+  "clinc_out_of_scope_test": {
+    "queries": 1000,
+    "recognised_as_out_of_scope": 0.905,
+    "clarified": 0.084,
+    "wrongly_accepted_as_banking": 0.011,
+    "examples_wrongly_accepted": [
+      [
+        "i need to update my address",
+        "edit_personal_details"
+      ],
+      [
+        "what is the fee for a cash advance",
+        "cash_withdrawal_charge"
+      ],
+      [
+        "can i deposit a check",
+        "top_up_by_cash_or_cheque"
+      ],
+      [
+        "is there a way to change your houses address",
+        "edit_personal_details"
+      ],
+      [
+        "how long do i have to wait to get my refund",
+        "Refund_not_showing_up"
+      ],
+      [
+        "how long does it take the irs to issue a tax refund",
+        "Refund_not_showing_up"
+      ],
+      [
+        "do you know if it is possible to close my savings account",
+        "terminate_account"
+      ],
+      [
+        "please take all my money out of my checking account and close the account",
+        "terminate_account"
+      ]
+    ]
+  }
+}
