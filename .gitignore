@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+cdk.out/
+infra/cdk.out/
+mlruns/
+mlflow.db
+.env
